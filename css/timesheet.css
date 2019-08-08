@@ -1,0 +1,439 @@
+*{
+	font-family: 'Roboto', sans-serif;
+}
+/*css cho tiêu đề */
+.Header{
+	width: 100%;
+	height: 70px;
+	background-color: red;
+    position: fixed;
+    z-index: 100;
+
+}
+
+#align-justify{
+	margin-right: 6px;
+	 display: none;
+}
+
+.timesheet{
+	width: 200px;
+	padding-top: 20px;
+	padding-left: 50px;
+	font-size: 20px;
+	color: white;
+}
+
+.icon-right{
+	width: 200px;
+	padding-top: 25px;
+	font-size: 15px;
+	color: white;
+	float: right;	
+	margin-top: -55px;
+}
+.icon-right i {
+	margin-left: 15px;
+}
+
+/*css cho menu */
+.menu{
+	width: 22%;
+	height:600px;
+	/*height: auto;*/
+	background-color: #fff;
+	float: left;
+	margin-top: 70px;
+	/**/
+    transition: all 0.75s;
+    z-index: 100;
+    position: fixed;
+   /* display: inline-block;*/
+   /* position: fixed;*/
+}
+.menu-top{
+	height: 135px;
+	background-color: white;
+	background-image:url(../user-img-background.jpg) ;	
+	position: relative;
+
+}
+.menu-body{
+	position: relative;
+	overflow-y: auto;
+	height: 55vh;
+}
+.menu-footer{
+	height: 70px;
+	background-color: white;
+	padding-top: 20px;
+	padding-left: 10px;
+}
+
+
+.img-account{
+	width: 48px;
+	height: 60px;
+}
+.css-menu{
+	margin-left: 10px;
+	font-size: 15px;
+	font-weight: bold;
+
+}
+ul{
+	margin-left: 5px;
+}
+li {
+	padding-top: 7px;
+	margin-top: 17px;
+	margin-left: -28px;
+}
+/*Css cho nội dung*/
+
+.content{
+	height:590px;
+	margin-left: 15px;
+	background-color: white;
+	margin: 90px 24px 7px 24px;
+	width: 74%;
+	float: right;
+	z-index: 50;
+	/*position: fixed;*/
+}
+.header{
+	padding : 20px;
+	height: 60px;
+	background-color: white;
+	position: relative;
+}
+
+.create-select-search{
+	display: inline-flex;
+}
+
+.icon-input{
+	position: relative;
+}
+.table{
+	margin : 40px 50px 10px 20px;
+	width: 96%;
+}
+.cr-pr{
+	padding-left: 15px;
+	height: 60px;
+	padding-top: 15px;
+}
+.lb-ip{
+	margin-top: 15px;
+	position: relative;
+	font-size: 15px;
+}
+.input-new{
+	width: 170px; 
+	height: 48px; 
+	padding-left: 10px
+}
+.btn-project-type{
+	margin-left: 15px;
+	height: 48px;
+	width: 150px;
+}
+
+#new-project{
+	margin-top: 5px;
+	margin-left: 7px;
+	width: 90%; 
+	height: 50px;
+	font-size: 15px;
+}
+
+#select-project{
+	margin-top: 20px; 
+	margin-left: 13px; 
+	width: 90%; 
+	height: 50px; 
+	padding-left: 15px;
+	font-size: 15px;
+}
+
+#search-name{
+	margin-top: 20px; 
+	margin-left: 20px; 
+	width: 90%;
+	height: 50px; 
+	padding-left: 40px
+
+}
+
+.team-member{
+	margin-left: 10px;
+	font-weight: normal;
+	font-size: 15px;
+}
+
+#task{
+ margin-left: 190px;
+}
+
+#billable{
+	margin-left : 100px;
+
+}
+/*.menu{
+	transition: all 0.5s;
+    font-family: "Roboto", sans-serif;
+    background: #fff;
+    width: 300px;
+    overflow: hidden;
+    display: inline-block;
+    height: calc(100vh - 70px);
+    position: fixed;
+    top: 70px;
+    left: 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 11 !important;
+
+     }
+    .ls-closed .menu {
+       left: -300px;
+     }
+
+    .ls-opened .menu {
+    left: 0px;*/
+
+/*.dropdown-menu{
+	
+	height: 750px;
+	width: 300px;
+	margin-left: -50px;
+	margin-top: 65px;
+	transition: all 0.5s;
+}*/
+.menu1{
+	/*height: 590px;*/
+	height: 750px;
+	width: 300px;
+	margin-left: -50px;
+	margin-top: 65px;
+	transition: all 0.5s;
+}
+
+@media screen and (max-width: 1220px) and (min-width: 903px) {
+	.content{
+		width: 90%;
+	}
+	.menu{
+		display: none;
+
+	}
+	/*.menu{
+		
+		z-index: 100;
+		height: 800px;
+	}*/
+	#align-justify{
+	margin-right: 6px;
+	display: inline-block;
+    }
+    /* */
+    /*.menu{
+	transition: all 0.5s;
+    font-family: "Roboto", sans-serif;
+    background: #fff;
+    width: 300px;
+    overflow: hidden;
+    display: inline-block;
+    height: calc(100vh - 70px);
+    position: fixed;
+    top: 70px;
+    left: 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 11 !important;
+
+     }*/
+    /* .ls-closed .menu {
+       left: -300px;
+     }
+
+    .ls-opened .menu {
+    left: 0px;
+     }*/
+    /*.menu-top{
+	height: 135px;
+	background-color: white;
+	background-image:url(../user-img-background.jpg) ;	
+	position: relative;
+
+    }
+    .menu-body{
+	position: relative;
+	overflow-y: auto;
+	height: 55vh;
+    }
+    .menu-footer{
+	height: 70px;
+	background-color: white;
+	padding-top: 20px;
+	padding-left: 10px;
+    }*/
+
+    /*.menu {
+    transition: all 0.5s;
+    font-family: "Roboto", sans-serif;
+    background: #fff;
+    width: 300px;
+    overflow: hidden;
+    display: inline-block;
+    height: calc(100vh - 70px);
+    position: fixed;
+    top: 70px;
+    left: 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 11 !important;
+    }
+
+    .ls-closed .menu {
+       left: -300px;
+     }
+
+    .ls-opened .menu {
+    left: 0px;
+     }*/
+
+ 
+
+
+}
+
+
+@media screen and (max-width: 902px) and (min-width: 859px) {
+	#select-project{
+	margin-top: 20px; 
+	margin-left: -2px; 
+	width: 115%; 
+	height: 50px; 
+	padding-left: 15px;
+}
+.menu{
+ 	  
+		display: none;
+	}
+
+#align-justify{
+	margin-right: 6px;
+	display: inline-block;
+    }
+}
+
+@media screen and (max-width: 860px) and (min-width: 835px) {
+	#select-project{
+	margin-top: 20px; 
+	margin-left: -4px; 
+	width: 122%; 
+	height: 50px; 
+	padding-left: 15px;
+}
+.menu{
+ 	  
+		display: none;
+	}
+
+#align-justify{
+	margin-right: 6px;
+	display: inline-block;
+    }
+}
+
+@media screen and (max-width: 860px) and (min-width: 705px) {
+	.menu{
+ 	  
+		display: none;
+	}
+
+#new-project{
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 137%; 
+	height: 50px;
+	
+}
+
+#select-project{
+	margin-top: 20px; 
+	margin-left: 20px; 
+	width: 439%; 
+	height: 50px; 
+	padding-left: 15px
+}
+
+#search-name{
+	margin-top: 20px; 
+	margin-left: 20px; 
+	width: 198%;
+	height: 50px; 
+	padding-left: 40px
+
+}
+#create-select-search{
+	display: block;
+}
+
+.content{
+		width: 90%;
+		height: auto;
+	}
+#align-justify{
+	margin-right: 6px;
+	display: inline-block;
+    }
+
+
+}
+@media screen and (max-width: 706px)  {
+
+ .menu{
+ 	  
+		display: none;
+	}
+
+#new-project{
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 137%; 
+	height: 50px;
+	
+}
+
+#select-project{
+	margin-top: 20px; 
+	margin-left: 20px; 
+	width: 439%; 
+	/*width: 409px;*/
+	height: 50px; 
+	padding-left: 15px
+}
+
+#search-name{
+	margin-top: 20px; 
+	margin-left: 20px; 
+	width: 187%;
+	height: 50px; 
+	padding-left: 40px
+
+}
+#create-select-search{
+	display: block;
+}
+
+.content{
+		width: 90%;
+		height: auto;
+	}
+#align-justify{
+	margin-right: 6px;
+	display: inline-block;
+    }
+
+}
+

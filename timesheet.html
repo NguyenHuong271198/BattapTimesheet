@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TimeSheets</title>
+	<link rel="stylesheet" type="text/css" href="css/timesheet.css">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--  <link rel="stylesheet" href="./css/bootstrap.min.css">
+     <script src="./js/jquery.min.js"></script>
+     <script src="./js/popper.min.js"></script>
+     <script src="./js/bootstrap.min.js"></script> -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery"></script> -->
+
+
+</head>
+
+<body style="background-color: #e9e9e9">
+  <!-- <div style="background-color: #e9e9e9"> -->
+
+	<div class="Header">
+		<div class="timesheet">	
+		    <!-- <a onClick="openMenu()" href="#"><i id ="align-justify" class="fa fa-align-justify "></i></a> -->
+		    <div id ="align-justify">
+		    <i id="btn-open"   onClick="openMenu()"  class="fa fa-align-justify "></i>
+		    <i id="btn-close"  onclick="closeMenu()" style="display: none" class="fa fa-arrow-left"></i>
+		    </div>
+		   
+           
+               
+           <!------->
+			<i class="fa fa-cubes"><span style="margin-left: 5px;">TimeSheet</span></i>
+		</div>		
+		<div class="icon-right">
+			<i class="fa fa-search"></i>
+			<i class="fa fa-flag-alt"><span>English</span></i>
+			<i class="fa fa-ellipsis-v"></i>
+		</div>
+	</div>
+
+<div  >
+	<div id="open" class="menu">
+		<div class="menu-top">
+			
+			<div class="img-account">
+			  <img class="rounded-circle" style="width: 48; height: 48 ; padding: 13px 15px 12px 15px" src="user..png">
+			 
+			  <span style="margin-left: 15px;">Admin</span>
+			  <span style="margin-left: 15px; font-size: 13px;">adminncc@gmail.com</span>
+
+			  <div class="dropdown" style="margin-left: 93%; position: absolute; margin-top: -16px">
+			  	
+			  	<a data-toggle="dropdown" href="">
+			      <i class="fa fa-angle-down">
+			      </i>
+			    </a>
+			      <div class="dropdown-menu">
+			         <a class="dropdown-item" href="#">
+
+			         	<i style ="margin-right: 5px"class="fa fa-lock"></i>Update Password
+			         </a>
+			         <a class="dropdown-item" href="#">
+			         	<i style ="margin-right: 5px"class="fa fa-sign-out-alt"></i>Log Out</a>
+			      </div> 
+			  </div>
+			  <div class="dropdown">
+  </div>
+		    </div>
+		</div>
+		<div class="menu-body">
+
+			<ul style="list-style-type: none; ">
+				<li><i class="fa fa-home"><span class="css-menu">Home Page</span></i></li>
+				<li><i class="fa fa-user"><span class="css-menu">Users</span></i></li>
+				<li><i class="fa fa-list-alt"><span class="css-menu">Manage Project</span></i></li>
+				<li><i class="fa fa-male"><span class="css-menu">Client</span></i></li>
+				<li><i class="fa fa-book-open"><span class="css-menu">Manage Tasks</span></i></li>
+				<li><i class="fa fa-calendar-alt"><span class="css-menu">Timesheet</span></i></li>
+				<li><i class="fa fa-clock"><span class="css-menu">My TimeSheets</span></i></li>
+			</ul>
+		</div>
+		<div class="menu-footer">
+			<span style="font-size: 13px">2019</span><span> </span><span style="color: #F44336; font-size: 13px">Timesheet</span><br/>
+			<span style="font-weight: bold; font-size: 13px">Version </span><span style="font-size: 13px">4.3.0.0 [20192407]</span>
+		</div>
+	</div>
+	<!------>
+</div>
+<!-------->
+	<div class="content">
+	  
+	   <div class="row">
+	   	 <div class=" col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		  <div class="card ">
+			  <div class="header">
+				 <h5>Manage Projects</h5>
+			  </div>
+			  <div style="margin-left: 98%; position: absolute; margin-top: 22px"  class="dropdown">
+			  	<a data-toggle="dropdown" href="">
+			     <i  class="fa fa-ellipsis-v"></i>
+			    </a>
+			        <div style ="margin-left: -125px"  class="dropdown-menu">
+ 			             <a class="dropdown-item" href="#">
+			         	     <i style ="margin-right: 5px"class="fa fa-redo"></i>Refresh
+			             </a>
+			        </div>
+			  </div>
+		  </div>
+		      <div id="create-select-search" class="row ">	
+		       <!--  <div class="create-select-search">   -->    	
+			      <div class =" col-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+			      	 <div class="container mt-3">
+			  	        <button id="new-project" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="myBtn">
+			  	        <i class=" fa fa-plus"></i>
+			  	         New Project</button>
+			  	         <!---dialong create -->
+			  	          <div class="modal fade" id="myModal">
+                             <div class="modal-dialog">
+                                    <div style="width: 770px; height: 690px"   class="modal-content">
+      
+                                     <!-- Modal Header -->
+                                       <div class="modal-header">
+                                         <h4 class="modal-title">Create Project</h4>
+                                         <button type="button" class="close" data-dismiss="modal">×</button>
+                                       </div>
+        
+                                     <!-- Modal body -->
+                                   <div class="modal-body">
+                                      <!-- Nav tabs -->
+                                     
+                                     <ul class="nav nav-tabs">
+                                      <li style="margin-left: 20px;"   class="nav-item">
+                                       <a class="nav-link active" data-toggle="tab" href="#general">general</a>
+                                      </li>
+                                     <li style="margin-left: 20px;" class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#team">Team</a>
+                                     </li>
+                                     <li  style="margin-left: 20px;" class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#tasks">Tasks</a>
+                                     </li>
+                                     </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="general" class="container tab-pane active"><br>
+        <div class="lb-ip">
+          <label><span style="margin-right: 65px; font-size: 15px">Client(*)</span>
+      	    <input style="width: 300px; height: 48px; padding-left: 10px" type="text" placeholder="Choose a client..."/>
+      	    <i style="position: absolute; margin-left: -25px; margin-top: 17px"class="fa fa-angle-down"></i>
+      	    <button style="margin-top: 5px; margin-left: 20px; width: 150px; height: 40px" class="btn btn-primary" id="myBtn">
+			  	        <i class=" fa fa-plus"></i>
+			  	         New Client</button>
+          </label>
+        </div>
+        <div class="lb-ip">
+         <label><span style="margin-right: 15px">Project name(*)</span>
+      	    <input style="width: 300px; height: 48px; padding-left: 10px" type="text" placeholder="Project Name...">
+         </label>
+        </div>
+        <div class="lb-ip">
+         <label><span style="margin-right: 18px">Project Code(*)</span>
+      	   <input class="input-new"  type="text" placeholder="Project Code...">
+         </label>
+        </div>
+        <div class="lb-ip">
+         <label><span style=" margin-right: 72px">Date(*)</span>
+      	   <input style="width: 200px; height: 48px; padding-left: 10px" type="text" placeholder="Start on">
+      	   <span>To</span>
+      	   <input style="width: 180px; height: 48px; padding-left: 10px"  type="text" placeholder="End on" >
+         </label>
+        </div>
+        <div class="lb-ip">
+         <label><span style="margin-right: 87px">Note</span>
+      	   <textarea style="width: 550px; height: 48px"></textarea>
+         </label>
+        </div>
+        <div class="lb-ip">
+         <label><span style="margin-right: 20px">Project Type</span>
+      	   <button class="btn-project-type" type="button" class="btn btn-light" >Time & Material</button>
+      	   <button class="btn-project-type" type="button" class="btn btn-danger" >Fixed Fee</button>
+      	   <button class="btn-project-type" type="button" class="btn btn-light" >Non Billable</button>
+         </label>
+        </div>
+    </div>
+    <div id="team" class="container tab-pane fade"><br>
+        <table class="table">
+        	<thead>
+        		<tr>
+        			<th>Team</th>
+        			<th>Member Type</th>
+        		</tr>
+        	</thead>
+        </table>
+       <!--  <span>Select team member </span> -->
+        <table class="table">
+        	<thead>
+        		<tr>
+        			<th>Select team member</th>
+        		</tr>
+        	</thead>
+        	<tbody>
+        		<tr><td><i class=" fa fa-plus-circle"><span class="team-member">Huong2k7</span></i></td></tr>
+        		<tr><td><i class=" fa fa-plus-circle"><span class="team-member">Admin1</span></i></td></tr>
+        		<tr><td><i class=" fa fa-plus-circle"><span class="team-member">Admin2</span></i></td></tr>
+        		<tr><td><i class=" fa fa-plus-circle"><span class="team-member">Admin3</span></i></td></tr>
+        		<!-- <tr><td>Huong2k7</td></tr>
+        		<tr><td>Huong2k7</td></tr> -->
+        		
+        	</tbody>
+        </table>
+    </div>
+    <div id="tasks" class="container tab-pane fade"><br>
+         <table class="table">
+        	<thead>
+        		<tr>
+        			<th><span id="task">Tasks</span></th>
+        			<th><span id="billable">Billable</span></th>
+        		</tr>
+        	</thead>
+        	<tbody>
+        		<tr><td><span class="glyphicon glyphicon-remove"></span>Huong2k7</td></tr>
+        		<tr><td><i class=" fa fa-remove"><span class="team-member">Admin1</span></i></td></tr>
+        		<tr><td><i class=" fa fa-clear"><span class="team-member">Admin2</span></i></td></tr>
+        		<tr><td><i class=" fa fa-clear"><span class="team-member">Admin3</span></i></td></tr>
+        	</tbody>
+        	<!-- <tbody>
+        		<tr><td><i class=" fa fa-plus-circle"><span class="team-member">Huong2k7</span></i></td></tr>
+        		<tr><td><i class=" fa fa-plus-circle"><span class="team-member">Admin1</span></i></td></tr>
+        		<tr><td><i class=" fa fa-plus-circle"><span class="team-member">Admin2</span></i></td></tr>
+        		<tr><td><i class=" fa fa-plus-circle"><span class="team-member">Admin3</span></i></td></tr>
+        	</tbody> -->
+        </table>
+    </div>
+  </div>
+
+                                   </div>
+        
+                                   <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-light" data-dismiss="modal">Cancle</button>
+                                   <button type="button" class="btn btn-danger" data-dismiss="modal">Save</button>
+                            </div>
+        
+                          </div>
+                         </div>
+                     </div>
+  
+			  	           
+			  	     </div>
+			  	     
+			      </div>
+			      <div class ="col-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+			  	     <select id="select-project" >
+			  		     <option>Active Project(16)</option>
+			  		     <option>Deactive Project(0)</option>
+			  		     <option>All Project(6)</option>
+			  	     </select>
+			      </div>
+			     <div class ="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			     	<div class="icon-input">
+			  	      <input id ="search-name" type="text" class="fa fa-search" placeholder="Search"  />
+			  	     <i style ="position: absolute; left: 33px; top:38px;"  class="fa fa-search"></i>
+			  	    </div>
+			     </div>
+			 <!-- </div> -->
+      </div>
+<!-------------------------------------------------------------------------------------------------->
+			 <table style="width: 95%" class="table">
+			 	<thead class="thead-light">
+			 		<tr>
+			 			<th>Tom</th>
+			 			<th></th>
+			 		</tr>
+			 	    <tbody>
+			 	    	<tr>
+			 	    		<td>Mimosa</td>
+			 	    		<td>
+			 	    			<select style="float: right; height: 37px; width: 120px; padding-left: 10px">
+			 	    				<option>Action</option>
+			 	    				<option>View</option>
+			 	    				<option>Edit</option>
+			 	    				<option>Deactive</option>
+			 	    				<option>Delete</option>
+			 	    			</select>
+			 	    		</td>			 	    		
+			 	    	</tr>
+			 	    	<tr>
+			 	    		<td>Hello Word</td>
+			 	    		<td>
+			 	    			<select style="float: right;height: 37px; width: 120px; padding-left: 10px">
+			 	    				<option>Action</option>
+			 	    				<option>View</option>
+			 	    				<option>Edit</option>
+			 	    				<option>Deactive</option>
+			 	    				<option>Delete</option>
+			 	    			</select>
+			 	    		</td>			 	    		
+			 	    	</tr>
+			 	    	<tr>
+			 	    		<td>Huong2k7</td>
+			 	    		<td>
+			 	    			<select style="float: right; height: 37px; width: 120px; padding-left: 10px" >
+			 	    				<option>Action</option>
+			 	    				<option>View</option>
+			 	    				<option>Edit</option>
+			 	    				<option>Deactive</option>
+			 	    				<option>Delete</option>
+			 	    			</select>
+			 	    		</td>			 	    		
+			 	    	</tr>
+			 	    </tbody>
+			 	</thead>
+			 	<!---->
+			 	<thead class="thead-light">
+			 		<tr>
+			 			<th>Aron</th>
+			 			<th></th>
+			 		</tr>
+			 	    <tbody>
+			 	    	<tr>
+			 	    		<td>Secondary</td>
+			 	    		<td>
+			 	    			<select  style="float: right; height: 37px; width: 120px; padding-left: 10px">
+			 	    				<option>Action</option>
+			 	    				<option>View</option>
+			 	    				<option>Edit</option>
+			 	    				<option>Deactive</option>
+			 	    				<option>Delete</option>
+			 	    			</select>
+			 	    		</td>			 	    		
+			 	    	</tr>
+			 	    	<tr>
+			 	    		<td>NCCsoft</td>
+			 	    		<td>
+			 	    			<select  style="float: right; height: 37px; width: 120px; padding-left: 10px">
+			 	    				<option>Action</option>
+			 	    				<option>View</option>
+			 	    				<option>Edit</option>
+			 	    				<option>Deactive</option>
+			 	    				<option>Delete</option>
+			 	    			</select>
+			 	    		</td>			 	    		
+			 	    	</tr>
+			 	    	
+			 	    </tbody>
+
+			 	</thead>
+			 </table>
+		  </div>
+		 </div>
+	   </div>
+	  
+	</div>
+
+   <!-- </div> -->
+   <script>
+   $(document).ready(function(){
+  $("#myBtn").click(function(){
+    $("#myModal").modal();
+  });
+});
+//////
+
+     // function checkWindowResize () {
+     //    var $body = $('body');
+     //    var width = $body.width();
+     //    var $openCloseBar = $('.menu .menu-top .menu-body .menu-footer');
+
+     //    if (width <= $Admin.options.sideBar.breakpointWidth) {
+     //        $body.addClass('ls-closed');
+     //        $openCloseBar.show();
+     //    }
+     //    else {
+     //        $body.removeClass('ls-closed');
+     //        if ($body.hasClass('ls-opened')) $body.removeClass('ls-opened');
+     //        $openCloseBar.hide();
+     //    }
+     // },
+      function openMenu(){
+      	// document.getElementById("open").style.width="300px";
+      	// document.getElementById("open").style.height="700px";
+      	document.getElementById("open").style.display="inline-block";
+      	document.getElementById("open").style.width="300px";
+      	document.getElementById("btn-open").style.display="none";
+      	document.getElementById("btn-close").style.display="inline-block";
+      	 // document.getElementById("open").style.position="Fixed";
+      }
+      function closeMenu(){
+      	document.getElementById("open").style.display="none";
+      	document.getElementById("open").style.width="-300px";
+      	document.getElementById("btn-open").style.display="inline-block";
+      	document.getElementById("btn-close").style.display="none";
+
+      }
+
+   </script>
+</body>
+</html>
